@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+        <script type="text/javascript" src="lib/jquery.js"></script>
+		<script type="text/javascript" src="src/RangeSlider.js"></script>
+		<link rel="stylesheet" href="css/slider.css" type="text/css">
+    <title></title>
+  </head>
+  <body>
+  <div id="test">
+      请输入数值：0<input min="0" max="30" id="range" oninput="change()" type="range">30
+      <input id="show" type="number" oninput="change2()" style="width:40px"> <input value="提交" type="submit">
+   </div>
+   <script>
+      function change(){ 
+      var num=document.getElementById("range"); 
+      var location=document.getElementById("show"); 
+      location.value=num.value; 
+  } 
+      function change2(){ 
+         var num=document.getElementById("range"); 
+         var location=document.getElementById("show"); 
+      if(location.value>=0&&location.value<=30&&location.value%1===0){
+         num.value=location.value; 
+      }
+      else{
+         alert("请输入0到30的整数！\n");
+      }
+  } 
+  </script>
+  </body>
+</html>

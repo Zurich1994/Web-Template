@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Gradient Color Demo</title>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="src/RangeSlider.js"></script>
+    <link rel="stylesheet" href="css/slider.css" type="text/css">
+</head>
+
+<body>
+<div id="test">
+    请输入数值：0<input  id="ran" type="range" value="0">30
+    <input id="tijiao" value="提交" type="submit">
+</div>
+<script>
+    function change(){
+        var num=document.getElementById("ran");
+        //var location=document.getElementById("show");
+        var tbtn=document.getElementById("tijiao");
+        //location.value=num.value;
+        tbtn.value=num.value+"台僵尸进行攻击";
+    }
+    $('input').RangeSlider({ min: 0,   max: 30,  step: 1,  callback: change});
+</script>
+</body>
+</html>
